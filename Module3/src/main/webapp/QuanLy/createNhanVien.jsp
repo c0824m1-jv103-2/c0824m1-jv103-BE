@@ -108,8 +108,8 @@
             </select>
         </div>
         <div class="buttons">
-            <button type="submit" class="save">Lưu lại</button>
             <button type="button" class="cancel" onclick="window.history.back();">Hủy bỏ</button>
+            <button type="submit" class="save">Lưu lại</button>
         </div>
     </form>
 </div>

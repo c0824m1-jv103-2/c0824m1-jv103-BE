@@ -53,29 +53,47 @@ h2 {
 /* Table styling */
 .custom-table {
     width: 100%;
-    margin-bottom: 1rem;
     border-collapse: collapse;
-    background: white;
-    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 12px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
     overflow: hidden;
 }
 
-.custom-table-bordered {
-    border: 1px solid #ccc;
+.custom-table th, .custom-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
 }
 
 .custom-table th {
-    padding: 12px 15px;
     background-color: #007BFF;
     color: white;
-    text-align: center;
     font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.custom-table tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.2s;
 }
 
 .custom-table td {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #ccc;
+    color: #333;
+    white-space: nowrap;
+}
+
+.custom-table thead {
+    position: sticky;
+    top: 0;
+    background: #007BFF;
+    z-index: 10;
 }
 
 /* Button Group Styling */
@@ -87,21 +105,18 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Nút quay lại (⬅️) và thêm mới (➕) chỉ hiển thị icon */
 .button-group-custom button {
     border: none;
     background: none;
-    font-size: 2.5rem; /* Tăng kích thước icon */
+    font-size: 2.5rem;
     cursor: pointer;
     transition: transform 0.2s, color 0.2s;
 }
 
-/* Hover: icon phóng to nhẹ */
 .button-group-custom button:hover {
     transform: scale(1.2);
 }
 
-/* Khi nhấn: icon thu nhỏ */
 .button-group-custom button:active {
     transform: scale(0.9);
 }
@@ -141,12 +156,10 @@ h2 {
     transition: background 0.3s ease, transform 0.2s;
 }
 
-/* Hiệu ứng hover */
 .combo-wrapper-custom button:hover {
     transform: scale(1.05);
 }
 
-/* Hiệu ứng nhấn */
 .combo-wrapper-custom button:active {
     transform: scale(0.95);
 }

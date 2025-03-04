@@ -72,6 +72,10 @@ public class PhongBanController extends HttpServlet {
         } else {
             khenThuongs = khenThuongService.findByLoai(loai);
         }
+        for (KhenThuong khenThuong : khenThuongs) {
+            khenThuong.setSoTienFormatted(CommonUtils.formatVND(khenThuong.getSoTien()));
+            khenThuong.setNgayFormatted(CommonUtils.formatDate(khenThuong.getNgay()));
+        }
         req.setAttribute("khenThuongs", khenThuongs);
         req.getRequestDispatcher("/QuanLy/KhenThuong.jsp").forward(req, resp);
     }
@@ -159,7 +163,7 @@ public class PhongBanController extends HttpServlet {
         resp.sendRedirect("/phongban?action=khenThuong");
     }
 
-    private void CreateNhanVien(HttpServletRequest req, HttpServletResponse resp) {
+    private void CreateNhanVien(HttpServletRequest req, HttpServletResponse resp) throws IOException{
         String HoTen = req.getParameter("HoTen");
         LocalDate NgaySinh = LocalDate.parse(req.getParameter("NgaySinh"), DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         String GioiTinh = req.getParameter("GioiTinh");
@@ -171,6 +175,7 @@ public class PhongBanController extends HttpServlet {
         NhanVien nhanVien = new NhanVien(HoTen, NgaySinh, GioiTinh, ChucVu, Email, CCCD, phongBan);
         nhanVienService.createNhanVien(nhanVien);
         try {
+            req.getSession().setAttribute("message", "Thêm mới thành công");
             resp.sendRedirect("/phongban");
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -193,6 +198,9 @@ public class PhongBanController extends HttpServlet {
         List<PhongBan> PhongBan = phongBanService.getPhongBanList();
         req.setAttribute("PhongBan", PhongBan);
         List<NhanVien> NhanViens = nhanVienService.getNhanVien(tenPhongBan);
+        for (NhanVien nhanVien : NhanViens) {
+            nhanVien.setNgayFormatted(CommonUtils.formatDate(nhanVien.getNgaySinh()));
+        }
         req.setAttribute("NhanViens", NhanViens);
         RequestDispatcher dispatcher = req.getRequestDispatcher("QuanLy/PhongBan.jsp");
         try {

@@ -58,7 +58,7 @@
                 <td>${item.ngayFormatted}</td>
                 <td>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="##delete${item.ma}">
-                        Xóa
+                        Delete
                     </button>
                 </td>
                 <!-- Modal -->
