@@ -37,6 +37,17 @@
     <br>
     <h2>Danh sách Nhân Viên</h2>
     <div class="employee-card">
+
+        <c:if test="${not empty sessionScope.message}">
+            <div class="alert">
+                    ${sessionScope.message}
+                <button type="button" class="close" aria-label="Close" onclick="removeMessage()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <c:remove var="message" scope="session"/>
+        </c:if>
+
         <table>
             <tr>
                 <th>STT</th>
@@ -104,5 +115,14 @@
         closeConfirmBox();
         alert("Xóa thành công");
     }
+</script>
+<script>
+    function removeMessage() {
+        fetch('/removeMessage', { method: 'POST' });
+    }
+
+    setTimeout(() => {
+        document.querySelector('.alert')?.remove();
+    }, 3000);
 </script>
 </html>

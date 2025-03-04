@@ -11,36 +11,112 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body styling */
         body {
-            background: linear-gradient(to right, #1a237e, #3d5afe);
-            color: white;
-            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #1a237e, #3d5afe);
+            padding: 20px;
         }
+
+        /* Container styling */
         .container {
-            background: rgba(255, 255, 255, 0.2);
+            max-width: 600px;
+            width: 100%;
+            background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
+        /* Heading styling */
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            font-size: 22px;
+            border-bottom: 2px solid #eace0e;
+        }
+
+        /* Form elements */
+        .form-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
         .form-control, .form-select, textarea {
-            background: rgba(255, 255, 255, 0.8);
-            color: black;
-            border: none;
-        }
-        .form-control:focus, .form-select:focus, textarea:focus {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
             background: white;
-            box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
         }
+
+        /* Button styling */
         .btn-primary {
-            background-color: #ffeb3b;
+            background: #ffeb3b;
             color: black;
             border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
+
         .btn-primary:hover {
-            background-color: #fdd835;
+            background: #fdd835;
+        }
+
+        .btn-secondary {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: #c82333;
+        }
+
+        /* Button group */
+        .d-flex {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .btn-save {
+            background: #007bff; /* Màu xanh nước biển */
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn-save:hover {
+            background: #0056b3; /* Màu xanh nước biển đậm hơn khi hover */
         }
     </style>
 </head>
@@ -85,7 +161,7 @@
 
         <div class="d-flex justify-content-between">
             <button type="button" class="btn btn-secondary" onclick="history.back()">Quay lại</button>
-            <button type="submit" class="btn btn-primary">Lưu</button>
+            <button type="submit" class="btn btn-save">Lưu</button>
         </div>
     </form>
 </div>
