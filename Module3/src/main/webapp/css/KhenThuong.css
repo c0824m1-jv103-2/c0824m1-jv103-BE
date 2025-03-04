@@ -1,0 +1,152 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    background: linear-gradient(to right, #1a237e, #3d5afe);
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar-custom {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+/* Main Content */
+.container-custom {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100%;
+    padding: 20px;
+}
+
+/* Heading styling */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.custom-table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.custom-table-bordered {
+    border: 1px solid #ccc;
+}
+
+.custom-table th {
+    padding: 12px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.custom-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* Button Group Styling */
+.button-group-custom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Nút quay lại (⬅️) và thêm mới (➕) chỉ hiển thị icon */
+.button-group-custom button {
+    border: none;
+    background: none;
+    font-size: 2.5rem; /* Tăng kích thước icon */
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+/* Hover: icon phóng to nhẹ */
+.button-group-custom button:hover {
+    transform: scale(1.2);
+}
+
+/* Khi nhấn: icon thu nhỏ */
+.button-group-custom button:active {
+    transform: scale(0.9);
+}
+
+.button-group-custom button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Wrapper căn giữa combobox */
+.combo-wrapper-custom {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Combobox Styling */
+.combo-wrapper-custom select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Button Styling */
+.combo-wrapper-custom button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+/* Hiệu ứng hover */
+.combo-wrapper-custom button:hover {
+    transform: scale(1.05);
+}
+
+/* Hiệu ứng nhấn */
+.combo-wrapper-custom button:active {
+    transform: scale(0.95);
+}
