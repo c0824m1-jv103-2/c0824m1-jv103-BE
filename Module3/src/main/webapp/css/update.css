@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1a237e, #3d5afe);
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    background: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eace0e;
+    padding-bottom: 10px;
+    font-size: 22px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.new-position {
+    display: block;
+    width: auto; /* Kích thước tự động theo nội dung */
+    padding: 8px 15px; /* Thu nhỏ padding để nút gọn hơn */
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 15px;
+    align-self: flex-start; /* Đưa nút về bên trái */
+}
+
+
+.new-position:hover {
+    background: #0056b3;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.save {
+    background: #0735ef;
+}
+
+.cancel {
+    background: #dc3545;
+}
+
+.save:hover {
+    background: #081278;
+}
+
+.cancel:hover {
+    background: #c82333;
+}
